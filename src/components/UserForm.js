@@ -23,18 +23,23 @@ export class UserForm extends Component {
     // Méthode pour passer à l'étape suivante
     nextStep = () => {
         const { step } = this.state;
+        alert('etape avant nextStep '+step);
         this.setState({
             step: step + 1
         });
+        alert('etape apres nextStep '+step);
     }
 
     // Go back  to previous step
     // Méthode pour passer à l'étape précédente
     previousStep = () => {
         const { step } = this.state;
+        alert('etape avant previousStep '+step);
+
         this.setState({
             step: step - 1
         });
+        alert('etape apres previousStep '+step);
     }
 
     // Handle fields change
